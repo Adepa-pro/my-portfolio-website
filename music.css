@@ -1,0 +1,730 @@
+.music-player {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    background: #111;
+    color: white;
+    border: 1px solid #a855f7;
+    border-radius: 50px;
+    box-shadow: 0 0 15px #a855f7;
+    z-index: 9999;
+}
+
+.music-player button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: #a855f7;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.music-player button:hover {
+    box-shadow: 0 0 15px #a855f7;
+    transform: scale(1.1);
+}
+/* MUSIC PAGE BACKGROUND */
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 60px 20px;
+    box-sizing: border-box;
+    background:
+    radial-gradient(circle at 15% 20%, #8a3500 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, #a34b00 0%, transparent 40%),
+    linear-gradient(135deg, #160700, #3d1600, #100500);
+        #050510;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+}
+
+/* MUSIC HEADING */
+h1 {
+    color: cyan;
+    font-size: 45px;
+    text-shadow: 0 0 10px cyan, 0 0 25px cyan;
+    margin-bottom: 25px;
+}
+
+/* PARAGRAPHS */
+p {
+    color: #c9c9e8;
+    font-size: 17px;
+    margin: 15px;
+}
+a {
+    color: cyan;
+    font-size: 17px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: white;
+    text-shadow: 0 0 15px cyan;
+}
+
+.music-player {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin: 70px auto 30px;
+    padding: 25px;
+    width: min(650px, 85%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: linear-gradient(135deg, #17132f, #101020);
+    border: 1px solid #a855f7;
+    border-radius: 25px;
+    box-shadow: 0 0 15px #a855f7,
+                0 0 35px rgba(168, 85, 247, 0.3);
+    color: white;
+}
+.music-player audio {
+    display: none;
+}
+
+.music-player button {
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, cyan, #a855f7);
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 0 15px cyan;
+    transition: 0.3s;
+}
+
+.music-player button:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 25px cyan;
+}
+
+.music-player span {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+h1 {
+    animation: titleGlow 2s infinite alternate;
+}
+
+@keyframes titleGlow {
+    from {
+        text-shadow: 0 0 10px cyan;
+    }
+    to {
+        text-shadow: 0 0 20px cyan,
+                     0 0 40px purple,
+                     0 0 60px cyan;
+    }
+}
+
+.music-player {
+    animation: floatMusic 3s ease-in-out infinite;
+    transition: 0.4s ease;
+}
+
+@keyframes floatMusic {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.music-player:hover {
+    box-shadow: 0 0 25px cyan,
+                0 0 50px purple;
+    border-color: cyan;
+    transform: scale(1.03);
+}
+
+.music-player button {
+    animation: pulseButton 1.8s infinite;
+}
+
+@keyframes pulseButton {
+    0%, 100% {
+        box-shadow: 0 0 10px cyan;
+    }
+    50% {
+        box-shadow: 0 0 30px cyan,
+                    0 0 45px purple;
+    }
+}
+
+.music-player span {
+    animation: songGlow 2s infinite alternate;
+}
+
+@keyframes songGlow {
+    from {
+        color: white;
+    }
+    to {
+        color: cyan;
+        text-shadow: 0 0 15px cyan;
+    }
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 250px;
+    height: 250px;
+    background: purple;
+    filter: blur(120px);
+    opacity: 0.2;
+    top: 20%;
+    left: -100px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 250px;
+    height: 250px;
+    background: cyan;
+    filter: blur(120px);
+    opacity: 0.15;
+    bottom: 5%;
+    right: -100px;
+    pointer-events: none;
+    z-index: -1;
+}
+.equalizer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 45px;
+}
+
+.equalizer i {
+    display: block;
+    width: 5px;
+    height: 15px;
+    border-radius: 10px;
+    background: cyan;
+    box-shadow: 0 0 10px cyan;
+    animation: dance 0.8s ease-in-out infinite alternate;
+}
+
+.equalizer i:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.equalizer i:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.equalizer i:nth-child(4) {
+    animation-delay: 0.1s;
+}
+
+.equalizer i:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.equalizer i:nth-child(6) {
+    animation-delay: 0.3s;
+}
+
+.equalizer i:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+@keyframes dance {
+    from {
+        height: 8px;
+        background: cyan;
+    }
+
+    to {
+        height: 42px;
+        background: #b84dff;
+        box-shadow: 0 0 20px #b84dff;
+    }
+}
+
+
+body {
+    background: linear-gradient(
+        135deg,
+        #120600,
+        #351200,
+        #1c0800,
+        #080300
+    );
+
+    background-size: 300% 300%;
+    animation: orangeBackground 12s ease infinite;
+
+    color: #fff2df;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+@keyframes orangeBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 100, 0, 0.20),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(255, 170, 0, 0.15),
+            transparent 35%
+        );
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+h1 {
+    color: #ff9d32;
+    text-shadow:
+        0 0 10px #ff6500,
+        0 0 25px #ff4500,
+        0 0 45px #ff8c00;
+}
+
+
+a {
+    color: #ffad42;
+    transition: 0.4s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 15px #ff7300;
+}
+
+/* ORANGE MUSIC TITLE */
+
+h1 {
+    color: #ff9d32;
+    text-shadow:
+        0 0 10px #ff6500,
+        0 0 25px #ff4500,
+        0 0 45px #ff8c00;
+}
+
+/* ORANGE LINKS */
+
+a {
+    color: #ffad42;
+    transition: 0.4s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 15px #ff7300;
+}
+
+/* ===== ORANGE NEON BACKGROUND ===== */
+
+html,
+body {
+    background: #180800 !important;
+    background-image:
+        radial-gradient(
+            ellipse at 20% 20%,
+            rgba(255, 85, 0, 0.35),
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at 80% 80%,
+            rgba(255, 145, 0, 0.25),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #180800,
+            #401600,
+            #1a0800
+        ) !important;
+
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    min-height: 100%;
+}
+
+/* ORANGE GLOW EFFECT */
+
+h1 {
+    color: #ffad42 !important;
+    text-shadow:
+        0 0 10px #ff6500,
+        0 0 25px #ff4500,
+        0 0 50px #ff8c00 !important;
+
+}
+.music-player {
+    border: 1px solid #ff8c32 !important;
+    box-shadow:
+        0 0 15px #ff6500,
+        0 0 35px rgba(255, 100, 0, 0.5) !important;
+}
+
+button {
+    background: linear-gradient(
+        135deg,
+        #ff6500,
+        #ffb000
+    ) !important;
+
+    box-shadow: 0 0 25px rgba(255, 100, 0, 0.6);
+}
+body {
+    background-size: 200% 200% !important;
+    animation: sunsetFlow 15s ease-in-out infinite !important;
+}
+
+@keyframes sunsetFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+h1 {
+    color: #ffbd70 !important;
+    letter-spacing: 3px;
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+    from {
+        text-shadow: 0 0 10px #ff6500;
+    }
+    to {
+        text-shadow:
+            0 0 15px #ff8c00,
+            0 0 35px #ff4500,
+            0 0 60px #ffae42;
+    }
+}
+p {
+    color: #ffe1bd;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
+    transition: 0.4s ease;
+}
+
+p:hover {
+    color: #ffffff;
+}
+.music-player {
+    background: linear-gradient(
+        135deg,
+        rgba(65, 27, 15, 0.85),
+        rgba(25, 10, 20, 0.95)
+    ) !important;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 170, 70, 0.7) !important;
+
+    box-shadow:
+        0 0 20px rgba(255, 100, 0, 0.4),
+        0 0 50px rgba(255, 140, 0, 0.2),
+        inset 0 0 25px rgba(255, 170, 70, 0.08) !important;
+
+    transition: all 0.5s ease;
+}
+.music-player:hover {
+    transform: translateY(-8px) scale(1.015);
+
+    box-shadow:
+        0 0 25px #ff6500,
+        0 0 60px rgba(255, 140, 0, 0.5),
+        inset 0 0 30px rgba(255, 170, 70, 0.12) !important;
+}
+a {
+    color: #ffb347;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 15px #ff8c00;
+}
+
+button {
+    transition: all 0.35s ease;
+}
+
+button:hover {
+    transform: scale(1.12);
+    box-shadow:
+        0 0 15px #ff8c00,
+        0 0 35px #ff6500;
+}
+
+html, body {
+    background: #160600 !important;
+    min-height: 100%;
+}
+
+body {
+    background-image:
+        radial-gradient(ellipse at 10% 15%, #783000 0%, transparent 35%),
+        radial-gradient(ellipse at 90% 85%, #653000 0%, transparent 40%),
+        linear-gradient(135deg, #160600, #2c1000, #100400) !important;
+
+    background-size: 200% 200% !important;
+    animation: galaxyMove 12s ease infinite;
+}
+
+@keyframes galaxyMove {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+
+    background-image:
+        radial-gradient(circle, #ffb347 2px, transparent 3px),
+        radial-gradient(circle, #ff6500 2px, transparent 3px),
+        radial-gradient(circle, #ffe0a0 1px, transparent 2px),
+        radial-gradient(circle, #ff8c00 2px, transparent 3px);
+
+    background-size: 130px 150px, 190px 200px,
+                     100px 180px, 240px 170px;
+
+    animation: floatingStars 18s linear infinite;
+    opacity: 0.55;
+}
+
+@keyframes floatingStars {
+    from { background-position: 0 0, 30px 50px, 70px 0, 0 80px; }
+    to { background-position: 0 -500px, 30px -450px, 70px -600px, 0 -550px; }
+}
+
+
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color: #ffbd68 !important;
+    letter-spacing: 4px;
+    text-shadow:
+        0 0 10px #ff6500,
+        0 0 25px #ff8c00,
+        0 0 55px #ff4500 !important;
+
+    animation: headingPulse 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes headingPulse {
+    from { filter: brightness(0.9); }
+    to { filter: brightness(1.5); }
+}
+
+
+.music-player,
+.audio-player,
+.player,
+.music-box,
+.song-player {
+    background: linear-gradient(
+        135deg,
+        rgba(85, 35, 12, 0.9),
+        rgba(25, 10, 15, 0.95)
+    ) !important;
+
+    border: 1px solid #ff9a35 !important;
+    border-radius: 30px !important;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 0 15px #ff6500,
+        0 0 35px rgba(255, 120, 0, 0.5),
+        inset 0 0 25px rgba(255, 170, 50, 0.1) !important;
+
+    transition: 0.5s ease !important;
+}
+
+.music-player:hover,
+.audio-player:hover,
+.player:hover,
+.music-box:hover,
+.song-player:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow:
+        0 0 25px #ff8c00,
+        0 0 60px #ff4500 !important;
+}
+
+
+button {
+    background: linear-gradient(
+        135deg,
+        #ff6500,
+        #ffb347
+    ) !important;
+
+    color: white !important;
+    border: none !important;
+    transition: 0.4s ease !important;
+}
+
+button:hover {
+    transform: scale(1.12);
+    box-shadow: 0 0 30px #ff8c00 !important;
+}
+
+
+a {
+    transition: 0.4s ease;
+}
+
+a:hover {
+    color: #ffb347 !important;
+    text-shadow: 0 0 20px #ff6500;
+}
+
+
+::selection {
+    background: #ff7900;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #160600;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#ff4500, #ffbd42);
+    border-radius: 20px;
+}
+
+/* ===== LUXURY ORANGE MUSIC THEME ===== */
+
+body {
+    background: #100904;
+    color: #fff4e8;
+    overflow-x: hidden;
+}
+
+/* Orange ambient background */
+body::before {
+    content: "";
+    position: fixed;
+    inset: -50%;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255, 100, 0, 0.2), transparent 35%),
+        radial-gradient(circle at 80% 70%, rgba(255, 170, 0, 0.15), transparent 35%);
+    animation: orangeGlow 10s ease-in-out infinite alternate;
+}
+
+@keyframes orangeGlow {
+    from {
+        transform: translate(-2%, -2%) scale(1);
+    }
+    to {
+        transform: translate(3%, 3%) scale(1.12);
+    }
+}
+
+/* Music content cards */
+main, section, .music-player {
+    position: relative;
+}
+
+/* Hover effects for music cards */
+.music-player,
+.song-card {
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 140, 0, 0.35);
+    border-radius: 22px;
+    backdrop-filter: blur(15px);
+}
+
+.music-player:hover,
+.song-card:hover {
+    transform: translateY(-6px);
+    border-color: #ffad33;
+    box-shadow:
+        0 0 18px rgba(255, 100, 0, 0.4),
+        0 0 35px rgba(255, 170, 0, 0.2);
+}
+
+/* Orange glowing headings */
+h1, h2, h3 {
+    color: #ffae42;
+    text-shadow: 0 0 15px rgba(255, 115, 0, 0.45);
+}
+
+/* Music controls */
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 18px rgba(255, 140, 0, 0.6);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background: #ff7800;
+    color: white;
+}
+
+
+
+

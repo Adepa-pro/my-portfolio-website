@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Vibes - Adepa</title>
+<link rel="stylesheet" href="music.css">
+ <link rel="stylesheet" href="https://ednjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.in.min.css">   
+    <style>
+body { background: black; color: white; font-family: Poppins; padding: 30px; }
+h1 { color: cyan; text-shadow: 0 0 10px cyan; }
+a { color: cyan; }
+</style>
+</head>
+<body>
+<h1> 🎵🎶🎹My Music</h1>
+<p>This is my website! Whole new content.</p>
+<p>Here I will play  one of my favorite song...</p>
+   <br><br>
+<a href="index.html">⬅ Back to Home</a>
+<div class="music-player">
+    <audio id="mySong" src="Holy Forever.mp3" controls></audio>
+
+    <button id="musicBtn" onclick="toggleMusic()">
+        ▶
+    </button>
+    <div class="equalizer">
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+</div>
+
+    <span>My Favourite Song 🎵</span>
+</div>
+<script>
+function toggleMusic() {
+    const song = document.getElementById("mySong");
+    const button = document.getElementById("musicBtn");
+
+    if (song.paused) {
+        song.play();
+        button.innerHTML = "⏸";
+    } else {
+        song.pause();
+        button.innerHTML = "▶";
+    }
+}
+</script>
+</body>
+</html>
+*
+<a href="projects.html" style="display:inline-block; padding:12px 25px; background:cyan; color:black; border-radius:25px; text-decoration:none; font-weight:bold; box-shadow:0 0 20px cyan;">
+  View My Music ✨
+</a>
